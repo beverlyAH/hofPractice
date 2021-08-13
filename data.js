@@ -1,4 +1,4 @@
-var numbers = [10, 7, 2, 4, 6, 14, 5, 82];
+var numbers = [10, 7, 2, 4, 6, 14, 5, 82, 25, 30, 100, 246];
 
 var fruits = [
   'apple',
@@ -61,13 +61,13 @@ var desserts = [
     ingredients: ['flour', 'eggs', 'sugar', 'cream of tartar'],
     type: 'cake'
   }
-]
+];
 
 var grocery = [
   {
-     id: 1,
-     product: 'Pork - Loin, Boneless',
-     price: 8.63
+    id: 1,
+    product: 'Pork - Loin, Boneless',
+    price: 8.63
   },
   {
     id: 2,
@@ -81,7 +81,7 @@ var grocery = [
   },
   {
     id: 4,
-    product:' Scrubbie - Scotchbrite Hand Pad',
+    product: ' Scrubbie - Scotchbrite Hand Pad',
     price: 4.74
   },
   {
