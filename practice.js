@@ -56,6 +56,7 @@ var dessertCategories = function(desserts) {
 
 // given an array of movie data objects,return an array containing
 // movies that came out between 1990 and 2000.
+// TIP: use an array as your accumulator - don't push to an external array!
 var ninetiesKid = function(movies) {
   
 };
