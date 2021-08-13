@@ -1,232 +1,292 @@
 (function() {
   'use strict';
 
-  describe('numbers', function() {
-    describe('underscore', function() {
-      describe('_.each', function() {
+  describe('_.each', function() {
 
+    describe('fruits', function() {
+      var testFruits;
+      beforeEach(function() {
+        testFruits = cloneObject(fruits);
       });
-      describe('_.filter', function() {
+      describe('moreFruits', function() {
 
+        underscoreMethods('each', true, function() {
+          var data = testFruits.slice();
+          moreFruits(data);
+        });
+        nativeMethods('forEach', false, function() {
+          var data = testFruits.slice();
+          moreFruits(data);
+        });
+
+        noForLoops(moreFruits);
+
+        it('create a copy of the given array', function() {
+          var data = moreFruits(testFruits);
+          expect(data).to.eql(testFruits);
+        });
+        it('a new array is returned', function() {
+          var data = moreFruits(testFruits);
+          expect(data).to.not.equal(testFruits);
+        });
       });
-      describe('_.map', function() {
 
+    });
+    describe('numbers', function() {
+      var testNumbers;
+      beforeEach(function() {
+        testNumbers = cloneObject(numbers);
       });
-      describe('_.reduce', function() {
-
+      describe('multiplesOfFive', function() {
+        underscoreMethods('each', true, function() {
+          multiplesOfFive(testNumbers);
+        });
+        nativeMethods('forEach', false, function() {
+          multiplesOfFive(testNumbers);
+        });
+        noForLoops(multiplesOfFive);
+        it('should return a number', function() {
+          expect(typeof multiplesOfFive(testNumbers)).to.equal('number');
+        });
+        it('should return the count of numbers that are multiples of five', function() {
+          var otherNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+          expect(multiplesOfFive(testNumbers)).to.equal(5);
+          expect(multiplesOfFive(otherNumbers)).to.equal(2);
+        });
       });
     });
-    describe('native', function() {
-      describe('.forEach', function() {
+  });
 
+  describe('_.filter', function() {
+
+    describe('fruits', function() {
+      var testFruits;
+      beforeEach(function() {
+        testFruits = cloneObject(fruits);
       });
-      describe('.filter', function() {
+      describe('onlyOneFruit', function() {
+        underscoreMethods('filter', true, function() {
+          onlyOneFruit(testFruits, 'cherry');
+        });
+        nativeMethods('filter', false, function() {
+          onlyOneFruit(testFruits, 'blueberry');
+        });
+        noForLoops(onlyOneFruit);
+        noNewArrays(onlyOneFruit);
 
+        it('should return an array with only the specified fruit string', function() {
+          var lemons = onlyOneFruit(testFruits, 'lemon');
+          var strawberries = onlyOneFruit(testFruits, 'strawberry');
+          expect(lemons.length).to.eql(1);
+          expect(strawberries.length).to.eql(1);
+          expect(lemons).to.eql(['lemon']);
+          expect(strawberries).to.eql(['strawberry']);
+        });
       });
-      describe('.map', function() {
 
+      describe('startsWith', function() {
+        underscoreMethods('filter', true, function() {
+          startsWith(testFruits, 'a');
+        });
+        nativeMethods('filter', false, function() {
+          startsWith(testFruits, 'b');
+        });
+        noForLoops(startsWith);
+        noNewArrays(startsWith);
+        it('should return an array', function() {
+          expect(Array.isArray(startsWith(testFruits, 'd'))).to.equal(true);
+        });
+        it('should return an array containing strings starting with the given letter', function() {
+          var startsWithP = startsWith(testFruits, 'p');
+          var startsWithA = startsWith(testFruits, 's');
+          var startsWithG = startsWith(testFruits, 'g');
+          expect(startsWithP.length).to.equal(4);
+          expect(startsWithA.length).to.equal(2);
+          expect(startsWithG.length).to.equal(1);
+        });
       });
-      describe('.reduce', function() {
+    });
+    describe('desserts', function() {
+      var testDesserts;
+      beforeEach(function() {
+        testDesserts = cloneObject(desserts);
+      });
+      describe('cookiesOnly', function() {
 
+        underscoreMethods('filter', true, function() {
+          cookiesOnly(testDesserts);
+        });
+        nativeMethods('filter', false, function() {
+          cookiesOnly(testDesserts);
+        });
+        noForLoops(cookiesOnly);
+        noNewArrays(cookiesOnly);
+        it('should return a new array containing only cookie object', function() {
+          var cookies = cookiesOnly(testDesserts);
+          var onlyCookies = _.every(cookies, function(dessert) {
+            return dessert.type === 'cookie';
+          });
+          expect(onlyCookies).to.equal(true);
+        });
       });
     });
   });
 
-  describe('movies', function() {
+
+
+  describe('_.reduce', function() {
+
+    describe('grocery', function() {
+      var testGrocery;
+      beforeEach(function() {
+        testGrocery = cloneObject(grocery);
+      });
+
+      describe('sumTotal', function() {
+        underscoreMethods('reduce', true, function() {
+          sumTotal(testGrocery);
+        });
+        nativeMethods('reduce', false, function() {
+          sumTotal(testGrocery);
+        });
+        noForLoops(sumTotal);
+        it('should return a number', function() {
+          expect(typeof sumTotal(grocery)).to.equal('number');
+        });
+        it('should return total sum of all prices', function() {
+          var total = sumTotal(testGrocery);
+          expect(total).to.equal(126.72);
+        });
+      });
+    });
+
+    describe('desserts', function() {
+      var testDesserts;
+      beforeEach(function() {
+        testDesserts = cloneObject(desserts);
+      });
+      describe('dessertCategories', function() {
+        underscoreMethods('reduce', true, function() {
+          dessertCategories(testDesserts);
+        });
+        nativeMethods('reduce', false, function() {
+          dessertCategories(testDesserts);
+        });
+        it('should not use a for loop', function() {
+          var stringified = dessertCategories.toString();
+
+          expect(stringified.includes('for')).to.equal(false);
+        });
+        it('should return an object', function() {
+          expect(dessertCategories(testDesserts)).to.be.an('object');
+        });
+        it('should return object with correct values', function() {
+          expect(dessertCategories(testDesserts).pie).to.equal(3);
+          expect(dessertCategories(testDesserts).cake).to.equal(2);
+          expect(dessertCategories(testDesserts).cookie).to.equal(2);
+          expect(dessertCategories(testDesserts).drink).to.equal(1);
+        });
+      });
+    });
+
 
   });
 
-  describe('fruits', function() {
+  describe('_.map', function() {
 
+    describe('grocery', function() {
+
+      describe('applyCoupon', function() {
+        var testGrocery;
+        beforeEach(function() {
+          testGrocery = cloneObject(grocery);
+        });
+        underscoreMethods('map', true, function() {
+          applyCoupon(testGrocery, 0.20);
+        });
+        nativeMethods('map', false, function() {
+          applyCoupon(testGrocery, 0.20);
+        });
+        noForLoops(applyCoupon);
+        noNewArrays(applyCoupon);
+        it('should not return the original array', function() {
+          var data = applyCoupon(testGrocery, 0.20);
+          expect(data).to.not.eql(grocery);
+        });
+        it('should return array of items with sale prices', function() {
+          expect(applyCoupon(testGrocery, 0.20)[0].salePrice).to.equal(6);
+        });
+        it('items in array should have added salePrice property', function() {
+          var onSale = applyCoupon(testGrocery, 0.20);
+          expect(onSale[0]).to.have.property('salePrice');
+        });
+      });
+
+    });
+
+    describe('fruits', function() {
+      var testFruits;
+      beforeEach(function() {
+        testFruits = cloneObject(fruits);
+      });
+      describe('upperCaseFruits', function() {
+        underscoreMethods('map', true, function() {
+          upperCaseFruits(testFruits);
+        });
+        nativeMethods('map', false, function() {
+          upperCaseFruits(testFruits);
+        });
+        noForLoops(upperCaseFruits);
+        noNewArrays(upperCaseFruits);
+        it('should not return the original array', function() {
+          var data = upperCaseFruits(testFruits);
+          expect(data).to.not.eql(testFruits);
+        });
+        it('should return an array with all strings converted to uppercase', function() {
+          var data = upperCaseFruits(testFruits);
+          var allUpperCase = true;
+          _.each(data, function(fruit) {
+            fruit.split('').forEach(function(letter) {
+              if (letter !== letter.toUpperCase()) {
+                allUpperCase = false;
+              }
+            });
+          });
+          expect(allUpperCase).to.equal(true);
+        });
+      });
+    });
+
+    describe('desserts', function() {
+      var testDesserts;
+      beforeEach(function() {
+        testDesserts = cloneObject(desserts);
+      });
+      describe('glutenFree', function() {
+        underscoreMethods('map', true, function() {
+          glutenFree(testDesserts);
+        });
+        nativeMethods('map', false, function() {
+          glutenFree(testDesserts);
+        });
+        noForLoops(glutenFree);
+        noNewArrays(glutenFree);
+        it('should not return the original array', function() {
+          var data = glutenFree(testDesserts);
+          expect(desserts[0].glutenFree).to.equal(undefined);
+        });
+        it('should return a new array with all items possessing a glutenFree status', function() {
+          var data = glutenFree(testDesserts);
+          var allHaveGlutenFreeProperty = true;
+          data.forEach(function(dessert) {
+            if (!dessert.hasOwnProperty('glutenFree')) {
+              allHaveGlutenFreeProperty = false;
+            }
+          });
+
+          expect(allHaveGlutenFreeProperty).to.equal(true);
+        });
+      });
+    });
   });
-
-  describe('desserts', function() {
-
-  });
-
-  describe('grocery', function() {
-
-  });
-
-
-//   describe('_.each', function() {
-//     describe('numbers', function() {
-//       describe('doubleNumbers', function() {
-//         underscoreMethods('each', true, function() {
-//           var data = numbers.slice();
-//           doubleNumbers(data);
-//         });
-//         nativeMethods('forEach', false, function() {
-//           var data = numbers.slice();
-//           doubleNumbers(data);
-//         });
-//         forLoop(doubleNumbers);
-//         var arr = [ ];
-//         it('should double all given numbers', function() {
-//           var data = numbers.slice();
-//           doubleNumbers(data)
-//           expect(data).to.eql([20, 14, 4, 8, 12, 28, 10, 164])
-//         });
-
-//         it('should not create a new array', function() {
-//           var stringified = doubleNumbers.toString();
-
-//           expect(stringified.includes('[]')).to.equal(false);
-//         });
-//       });
-
-//       describe('multiplesOfFive', function() {
-//         underscoreMethods('each', true, function() {
-//           multiplesOfFive(numbers);
-//         });
-//         nativeMethods('forEach', false, function() {
-//           multiplesOfFive(numbers);
-//         });
-//         forLoop(multiplesOfFive);
-
-//         it('should return the count of numbers that are multiples of five', function() {
-//           expect(multiplesOfFive(numbers)).to.equal(2);
-//         })
-//       })
-//     });
-//   });
-
-//   describe('fruits', function() {
-//     describe('_.filter', function() {
-//       describe('onlyLemons', function() {
-//         underscoreMethods('filter', true, function() {
-//           onlyLemons(fruits);
-//         })
-//         nativeMethods('filter', false, function() {
-//           onlyLemons(fruits);
-//         })
-
-//         it('should return only lemon', function() {
-//           var lemons = onlyLemons(fruits);
-//           expect(lemons.length).to.eql(1);
-//           expect(lemons).to.eql(['lemon']);
-//         });
-
-//         it('should not contain any new arrays', function() {
-//           var stringified = onlyLemons.toString();
-
-//           expect(stringified.includes('[]')).to.equal(false);
-//         });
-
-//         it('should not use a for loop', function() {
-//           var stringified = onlyLemons.toString();
-
-//           expect(stringified.includes('for')).to.equal(false);
-//         })
-//       });
-//     })
-
-//     describe('desserts', function() {
-//       underscoreMethods('filter', true, function() {
-//         cookiesOnly(desserts);
-//       })
-//       nativeMethods('filter', false, function() {
-//         cookiesOnly(desserts);
-//       })
-
-//       it('should return only cookies', function() {
-//         var cookies = cookiesOnly(desserts);
-//         var onlyCookies = _.every(cookies, (dessert) => {
-//           return dessert.type === 'cookie';
-//         });
-//         expect(onlyCookies).to.equal(true);
-//       });
-
-//       it('should not contain any new arrays', function() {
-//         var stringified = cookiesOnly.toString();
-
-//         expect(stringified.includes('[]')).to.equal(false);
-//       });
-
-//       it('should not use a for loop', function() {
-//         var stringified = cookiesOnly.toString();
-
-//         expect(stringified.includes('for')).to.equal(false);
-//       })
-//     })
-//   });
-
-//   describe('_.reduce', function() {
-
-//     describe('grocery', function() {
-//       var total = sumTotal(grocery);
-
-//       describe('sumTotal', function() {
-//         underscoreMethods('reduce', true, function() {
-//           sumTotal(grocery);
-//         });
-//         nativeMethods('reduce', false, function() {
-//           sumTotal(grocery)
-//         });
-//         it('should not use a for loop', function() {
-//           var stringified = sumTotal.toString();
-
-//           expect(stringified.includes('for')).to.equal(false);
-//         })
-//         it('should return total sum of all prices', function() {
-//           expect(total).to.equal(126.72)
-//         });
-//       });
-//       describe('sumTotalUnderFive', function() {
-//         underscoreMethods('reduce', true, function() {
-//           sumTotal(grocery);
-//         });
-//         nativeMethods('reduce', false, function() {
-//           sumTotal(grocery)
-//         });
-//       })
-//     })
-
-//     describe('desserts', function() {
-
-//       describe('dessertCategories', function() {
-//         underscoreMethods('reduce', true, function() {
-//           dessertCategories(desserts);
-//         });
-//         nativeMethods('reduce', false, function() {
-//           dessertCategories(desserts);
-//         });
-//         it('should not use a for loop', function() {
-//           var stringified = dessertCategories.toString();
-
-//           expect(stringified.includes('for')).to.equal(false);
-//         })
-//         it('should return an object', function() {
-//         expect(dessertCategories(desserts)).to.be.an('object');
-//         });
-//         it('should return object with correct values', function() {
-//           expect(dessertCategories(desserts).pie).to.equal(3);
-//           expect(dessertCategories(desserts).cake).to.equal(2);
-//           expect(dessertCategories(desserts).cookie).to.equal(2);
-//           expect(dessertCategories(desserts).drink).to.equal(1);
-//         })
-//       })
-//     })
-
-
-//   })
-
-//   describe('_.map', function() {
-//     describe('grocery', function() {
-//       describe('applyCoupon', function() {
-//         underscoreMethods('map', true, function() {
-//           applyCoupon(grocery, 0.20);
-//         });
-//         nativeMethods('map', false, function() {
-//           applyCoupon(grocery, 0.20);
-//         });
-//         it('should return array of items with sale prices', function() {
-//           console.log(applyCoupon(grocery, 0.20)[0]);
-//           expect(applyCoupon(grocery, 0.20)[0].price).to.equal(6.90);
-//         })
-//       })
-//     });
-
-//   })
-
 }());
