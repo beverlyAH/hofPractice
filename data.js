@@ -194,70 +194,70 @@ var grocery = [
 var movies = [
   {
     title: 'Back to the Future',
-    releaseDate: 1985,
+    releaseYear: 1985,
     rating: 8.5,
     genre: ['Adventure', 'Comedy', 'Sci-fi'],
     runtime: 116
   },
   {
     title: 'Star Wars',
-    releaseDate: 1977,
+    releaseYear: 1977,
     rating: 8.6,
     genre: ['Action', 'Adventure', 'Fantasy'],
     runtime: 121
   },
   {
     title: 'Titanic',
-    releaseDate: 1997,
+    releaseYear: 1997,
     rating: 7.8,
     genre: ['Drama', 'Romance'],
     runtime: 194
   },
   {
     title: 'The Wizard of Oz',
-    releaseDate: 1939,
+    releaseYear: 1939,
     rating: 8.0,
     genre: ['Adventure', 'Family', 'Fantasy'],
     runtime: 102
   },
   {
     title: 'Casablanca',
-    releaseDate: 1942,
+    releaseYear: 1942,
     rating: 8.5,
     genre: ['Drama', 'Romance', 'War'],
     runtime: 102
   },
   {
     title: 'Pulp Fiction',
-    releaseDate: 1994,
+    releaseYear: 1994,
     rating: 8.9,
     genre: ['Crime', 'Drama'],
     runtime: 154
   },
   {
     title: 'The Shining',
-    releaseDate: 1980,
+    releaseYear: 1980,
     rating: 8.4,
     genre: ['Horror', 'Drama'],
     runtime: 146
   },
   {
     title: 'The Avengers',
-    releaseDate: 2012,
+    releaseYear: 2012,
     rating: 8.0,
     genre: ['Action', 'Adventure', 'Sci-fi'],
     runtime: 143
   },
   {
     title: 'Toy Story',
-    releaseDate: 1995,
+    releaseYear: 1995,
     rating: 8.3,
     genres: ['Animation', 'Adventure', 'Comedy'],
     runtime: 81
   },
   {
     title: 'The Dark Knight',
-    releaseDate: 2008,
+    releaseYear: 2008,
     rating: 9.0,
     genres: ['Action', 'Crime', 'Drama'],
     runtime: 152
