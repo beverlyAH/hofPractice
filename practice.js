@@ -1,3 +1,7 @@
+// This repo is optional extra practice to use the underscore functions.
+// Here we'll be writing new functions, but these functions will use 
+// the underscore functions within them. 
+
 /*
  *
  *  _.each
@@ -6,7 +10,13 @@
 
 // use _.each to create a copy of the given array.
 var moreFruits = function(fruits) {
+  var results = [];
 
+  _.each(fruits, function(fruit, index, collection) {
+    results.push(fruit);
+  });
+
+  return results;
 };
 
 // use _.each to traverse the number array and determine
@@ -27,7 +37,7 @@ var onlyOneFruit = function(fruits, targetFruit) {
 };
 
 // use _.filter to return the fruits array with only fruits
-// starting with the letter 'P'
+// starting with the letter 'P'.
 var startsWith = function(fruits, letter) {
 
 };
@@ -63,7 +73,7 @@ var ninetiesKid = function(movies) {
 
 // return an boolean stating if there exists a movie with a shorter
 // runtime than your time limit.
-// timeLimit is an integer representing a number of minutes
+// timeLimit is an integer representing a number of minutes.
 var movieNight = function(movies, timeLimit) {
 
 };
