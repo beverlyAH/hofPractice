@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  describe('underscore', function() {
+  describe('Underscore Practice', function() {
 
 
     describe('_.each', function() {
