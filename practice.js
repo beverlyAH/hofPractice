@@ -84,23 +84,6 @@ var movieNight = function(movies, timeLimit) {
  *
  */
 
-// use _.map to return an array of items with their sale prices, with a new property
-// containing the sale price. round any decimals to two places.
-/* example output:
-  var salePrices = applyCoupon(grocery, 0.20);
-  [
-    {
-      id: 1,
-      product: 'Pork - Loin, Boneless',
-      price: 8.63
-      salePrice: 6
-    }
-  ];
-*/
-var applyCoupon = function(grocery, coupon) {
-    
-};
-
 // given an array of strings, use _.map to return a new array containing all
 // strings converted to uppercase letters.
 var upperCaseFruits = function(fruits) {
@@ -111,5 +94,29 @@ var upperCaseFruits = function(fruits) {
 // that have a new "glutenFree" property, with a boolean value.
 // TIP: Items that contain flour are not gluten-free.
 var glutenFree = function(desserts) {
+
+};
+
+// use _.map to return an array of items with their sale prices, with a new property
+// containing the sale price. round any decimals to 2 places.
+//
+// having trouble with decimals? check out this article:
+// http://adripofjavascript.com/blog/drips/avoiding-problems-with-decimal-math-in-javascript.html
+// 
+/*
+
+ example output:
+  var salePrices = applyCoupon(grocery, 0.20);
+  [
+    {
+      id: 1,
+      product: 'Olive Oil',
+      price: '$12.1', 
+      salePrice: '$9.61'
+    }
+  ];
+
+*/
+var applyCoupon = function(grocery, coupon) {
 
 };
