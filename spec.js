@@ -138,10 +138,10 @@
 
     describe('_.reduce', function() {
 
-      describe('grocery', function() {
+      describe('groceries', function() {
         var testGrocery;
         beforeEach(function() {
-          testGrocery = cloneObject(grocery);
+          testGrocery = cloneObject(groceries);
         });
 
         describe('sumTotal', function() {
@@ -153,7 +153,7 @@
           });
           noForLoops(sumTotal);
           it('should return a number', function() {
-            expect(typeof sumTotal(grocery)).to.equal('number');
+            expect(typeof sumTotal(groceries)).to.equal('number');
           });
           it('should return total sum of all prices', function() {
             var total = sumTotal(testGrocery);
@@ -310,12 +310,12 @@
       });
 
 
-      describe('grocery', function() {
+      describe('groceries', function() {
 
         describe('applyCoupon', function() {
           var testGrocery;
           beforeEach(function() {
-            testGrocery = cloneObject(grocery);
+            testGrocery = cloneObject(groceries);
           });
           underscoreMethods('map', true, function() {
             applyCoupon(testGrocery, 0.20);
@@ -327,7 +327,7 @@
           noNewArrays(applyCoupon);
           it('should not return the original array', function() {
             var data = applyCoupon(testGrocery, 0.20);
-            expect(data).to.not.eql(grocery);
+            expect(data).to.not.eql(groceries);
           });
           it('should return array of items with sale prices', function() {
             var data = applyCoupon(testGrocery, 0.20);

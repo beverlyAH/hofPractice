@@ -63,7 +63,7 @@ var desserts = [
   }
 ];
 
-var grocery = [
+var groceries = [
   {
     id: 1,
     product: 'Olive Oil',

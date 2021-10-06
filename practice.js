@@ -106,7 +106,7 @@ var glutenFree = function(desserts) {
 /*
 
  example output:
-  var salePrices = applyCoupon(grocery, 0.20);
+  var salePrices = applyCoupon(groceries, 0.20);
   [
     {
       id: 1,
@@ -117,6 +117,6 @@ var glutenFree = function(desserts) {
   ];
 
 */
-var applyCoupon = function(grocery, coupon) {
+var applyCoupon = function(groceries, coupon) {
 
 };
