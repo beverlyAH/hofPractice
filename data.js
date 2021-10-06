@@ -63,132 +63,82 @@ var desserts = [
   }
 ];
 
-var grocery = [
+var groceries = [
   {
     id: 1,
-    product: 'Pork - Loin, Boneless',
-    price: 8.63
+    product: 'Olive Oil',
+    price: '$' + 12.1
   },
   {
     id: 2,
-    product: 'Tomatoes - Vine Ripe, Red',
-    price: 2.07
+    product: 'Tomato Soup',
+    price: '$' + 3.48
   },
   {
     id: 3,
-    product: 'Mortadella',
-    price: 1.27
+    product: 'Cheesecake',
+    price: '$' + 17.36
   },
   {
     id: 4,
-    product: ' Scrubbie - Scotchbrite Hand Pad',
-    price: 4.74
+    product: 'Sirloin Steak',
+    price: '$' + 14.8
   },
   {
     id: 5,
-    product: 'Rice - Wild',
-    price: 5.85
+    product: 'Brie Cheese',
+    price: '$' + 23.28
   },
   {
     id: 6,
-    product: 'Sprouts - Bean',
-    price: 7.97
+    product: 'Ground Beef',
+    price: '$' + 1.44
   },
   {
     id: 7,
-    product: 'Salmon - Atlantic, Skin On',
-    price: 4.80
+    product: 'Tofu',
+    price: '$' + 11.11
   },
   {
     id: 8,
-    product: 'Bread - Pain Au Liat X12',
-    price: 2.59
+    product: 'Lentils',
+    price: '$' + 21.77
   },
   {
     id: 9,
-    product: 'Tea - Chamomile',
-    price: 6.05
+    product: 'Cola, 12pk',
+    price: '$' + 22.58
   },
   {
     id: 10,
-    product: 'Wine - Prem Select Charddonany',
-    price: 3.44
+    product: 'Skittles',
+    price: '$' + 3.79
   },
   {
     id: 11,
-    product: 'Bread - Sour Sticks With Onion',
-    price: 8.78
+    product: 'Flour - White',
+    price: '$' + 5.59
   },
   {
     id: 12,
-    product: 'Soup - Chicken And Wild Rice',
-    price: 3.49
+    product: 'Sauce - Pizza',
+    price: '$' + 9.23
   },
   {
     id: 13,
-    product: 'Soup - Knorr, Country Bean',
-    price: 2.38
+    product: 'Whole Milk, Gallon',
+    price: '$' + 6.43
   },
   {
     id: 14,
-    product: 'Muffin - Bran',
-    price: 6.10
+    product: 'Butter',
+    price: '$' + 5.11
   },
   {
     id: 15,
-    product: 'Smoked Paprika',
-    price: 8.87
+    product: 'Bread - Wheat',
+    price: '$' + 15.91
   },
-  {
-    id: 16,
-    product: 'Tomatillo',
-    price: 0.21
-  },
-  {
-    id: 17,
-    product: 'Wine - Bouchard La Vignee Pinot',
-    price: 4.22
-  },
-  {
-    id: 18,
-    product: 'Cheese - Mozzarella, Buffalo',
-    price: 4.45
-  },
-  {
-    id: 19,
-    product: 'Buttons',
-    price: 5.26
-  },
-  {
-    id: 20,
-    product: 'Veal',
-    price: 1.78
-  },
-  {
-    id: 21,
-    product: 'Yams',
-    price: 2.35
-  },
-  {
-    id: 22,
-    product: 'Bar - Sweet And Salty Chocolate',
-    price: 8.47
-  },
-  {
-    id: 23,
-    product: 'Lobster - Cooked',
-    price: 9.28
-  },
-  {
-    id: 24,
-    product: 'Ice Cream Bar - Rolo Cone',
-    price: 8.67
-  },
-  {
-    id: 25,
-    product: 'Basil - Thai',
-    price: 5.00
-  }
 ];
 
 var movies = [
