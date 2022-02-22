@@ -112,7 +112,7 @@ var glutenFree = function(desserts) {
       id: 1,
       product: 'Olive Oil',
       price: '$12.1', 
-      salePrice: '$9.61'
+      salePrice: '$9.68'
     }
   ];
 
