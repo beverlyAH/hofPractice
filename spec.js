@@ -123,12 +123,13 @@
           });
           noForLoops(cookiesOnly);
           noNewArrays(cookiesOnly);
-          it('should return a new array containing only cookie object', function() {
+          it('should return a new array containing only cookie objects', function() {
             var cookies = cookiesOnly(testDesserts);
             var onlyCookies = _.every(cookies, function(dessert) {
               return dessert.type === 'cookie';
             });
             expect(onlyCookies).to.equal(true);
+            expect(cookies.length).to.equal(2);
           });
         });
       });
