@@ -28,7 +28,7 @@ var multiplesOfFive = function (numbers) {
 
 };
 
-// use _.each to traverse the tweets array to build a user specific array.
+// use _.each to build an array containing only tweets belonging to a specified user.
 var getUserTweets = function(tweets, user) {
 
 };
@@ -79,7 +79,8 @@ var glutenFree = function (desserts) {
 
 };
 
-//
+// given an array of tweet objects, return a new array of strings
+// containing only the message properties.
 var allUserMessages = function(tweets) {
 
 };
