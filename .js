@@ -113,6 +113,7 @@ var upperCaseFruits = function (fruits) {
   var result = _.map(fruits, function(fruit) {
     return fruit.toUpperCase();
   });
+  console.log(result);
   return result;
 };
 
@@ -122,30 +123,20 @@ var upperCaseFruits = function (fruits) {
 //i- array of dessert objects
 //o- new array of objects that glutenFree is true
 var glutenFree = function (desserts) {
-  //filter dessert ingredients doesn't include gluten
-  var result = _.filter(desserts, function(dessert) {
+  //if dessert ingredients doesn't include gluten, map
+  var result =  _.map(desserts, function(dessert) {
     if (!dessert.ingredients.includes('flour')) {
-      dessert.glutenFree = true;
-      return dessert;
+      return dessert['glutenFree'] = true;
     }
   });
-  //map the filtered array
-  var mappedResult = _.map(result, function(lemonade) {
-    return lemonade;
-  });
-  return mappedResult;
+
+  return result;
 };
 
 // given an array of tweet objects, return a new array of strings
 // containing only the message properties.
-//i - tweets, array of objects
-//o - all the message strings
 var allUserMessages = function(tweets) {
-  //iterate and map tweet.message
-  var result = _.map(tweets, function(tweet) {
-    return tweet.message;
-  });
-  return result;
+
 };
 
 // use _.map to return an array of items with their sale prices, with a new property
@@ -168,29 +159,10 @@ var allUserMessages = function(tweets) {
   ];
 
 */
-
-//i array of items, with price key
-//o -array of items, price has the 20% off coupon applied
-//c
-//e - the round the price to the nearest cent
-//15910 / .2 === 3182
-//15910 / 2 === 31820
 var applyCoupon = function (groceries, coupon) {
-  //map the items to new array, the price is changed
-  var result = _.map(groceries, function(item) {
-    // container
-    var container = {};
-    // dollar sign off
-    var numberPrice = item.price.slice(1);
-    //the find the price to subtract from current price
-    var couponNumber = numberPrice * coupon;
-    var finalNumber = Number(numberPrice) - Number(couponNumber);
-    var finalStr = '$' + finalNumber.toFixed(2);
-    container.salePrice = finalStr;
-    return container;
-  });
-  return result;
+
 };
+
 /*
  *
  *  _.reduce
@@ -199,36 +171,13 @@ var applyCoupon = function (groceries, coupon) {
 
 // return the total price of all products.
 var sumTotal = function (products) {
-  // create a new array of the prices, so you can reduce to find sum
-  var priceArray = _.map(products, function(item) {
-    var numberPrice = item.price.slice(1);
-    return numberPrice;
-  });
-  // reduce through the new prices array created to find the sum
-  var result = _.reduce(priceArray, function(accumulator, num) {
-    return accumulator + Number(num);
-  }, 0);
-  return result;
-};
-// return an object consisting of dessert types and how many of each.
-// exampleOutput: { 'cake': 3, 'drink': 1 }
-//i- array of dessert objects
-//o- dessert type, how many of each
-//c
-//e
 
+};
+
+// return an object consisting of dessert types and how many of each.
+// exampleOutput: { dessertType: 3, dessertType2: 1 }
 var dessertCategories = function (desserts) {
-  var result = _.reduce(desserts, function(dessertBox, dessert) {
-    var type = dessert.type;
-    if (dessertBox[type] == null) {
-      dessertBox[type] = 1;
-    } else {
-      dessertBox[type]++;
-    }
-    return dessertBox;
-  }, {});
-  //create a new result object to contain types and number
-  return result;
+
 };
 
 // return an object with the proper count of all user messages
@@ -243,52 +192,19 @@ var dessertCategories = function (desserts) {
   }
 */
 var countMessagesPerUser = function(tweets) {
-  var result = _.reduce(tweets, function(tweetPerUser, tweet) {
-    var user = tweet.user;
-    if (tweetPerUser[user] == null) {
-      tweetPerUser[user] = 1;
-    } else {
-      tweetPerUser[user]++;
-    }
-    return tweetPerUser;
-  }, {});
-  return result;
+
 };
 
 // given an array of movie data objects,return an array containing
 // movies that came out between 1990 and 2000.
 // TIP: use an array as your accumulator - don't push to an external array!
-//releaseYear
-//i - an array of movie objects
-//o - array of movie objects from the 90s to 2000
 var ninetiesKid = function (movies) {
-  console.log(movies);
-  var result = _.reduce(movies, function (accum, movie) {
-    var releaseYear = movie.releaseYear;
-    if (releaseYear >= 1990 && releaseYear <= 2000) {
-      accum.push(movie.title);
-    }
-    return accum;
-  }, []);
-  return result;
+
 };
 
 // return an boolean stating if there exists a movie with a shorter
 // runtime than your time limit.
 // timeLimit is an integer representing a number of minutes.
 var movieNight = function (movies, timeLimit) {
-  console.log(movies);
-  console.log(timeLimit);
-  var result = _.reduce(movies, function (accum, movie) {
-    var runtime = movie.runtime;
-    if (runtime < timeLimit) {
-      accum[movie] = 1;
-    }
-    return accum;
-  }, {});
 
-  if (Object.keys(result).length === 0) {
-    return false;
-  }
-  return true;
 };
