@@ -7,7 +7,7 @@ var fruits = [
   'starfruit',
   'pear',
   'lemon',
-  'lime,',
+  'lime',
   'blueberry',
   'cherry',
   'apricot',
