@@ -346,6 +346,13 @@
             var data = upperCaseFruits(testFruits);
             expect(data).to.not.eql(testFruits);
           });
+          it('should return an array of strings', function () {
+            var data = upperCaseFruits(testFruits);
+            expect(Array.isArray(data), 'returned value should be an array').to.be.true;
+            _.each(data, function (fruit) {
+              expect(fruit).to.be.a('string');
+            });
+          });
           it('should return an array with all strings converted to uppercase', function () {
             var data = upperCaseFruits(testFruits);
             var allUpperCase = true;
