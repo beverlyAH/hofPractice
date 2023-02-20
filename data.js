@@ -216,117 +216,117 @@ var movies = [
 
 var tweets = [
   {
-    "user": "douglascalhoun",
-    "message": "that wizard overhauled this worm #techlife",
-    "createdAt": "2022-09-05T21:39:19.281Z",
-    "profilePhotoURL": "./assets/img/user-3.png"
+    'user': 'douglascalhoun',
+    'message': 'that wizard overhauled this worm #techlife',
+    'createdAt': '2022-09-05T21:39:19.281Z',
+    'profilePhotoURL': './assets/img/user-3.png'
   },
   {
-    "user": "douglascalhoun",
-    "message": "completely overhauled this security system #sxsw",
-    "createdAt": "2022-09-06T02:39:19.281Z",
-    "profilePhotoURL": "./assets/img/user-3.png"
+    'user': 'douglascalhoun',
+    'message': 'completely overhauled this security system #sxsw',
+    'createdAt': '2022-09-06T02:39:19.281Z',
+    'profilePhotoURL': './assets/img/user-3.png'
   },
   {
-    "user": "mracus",
-    "message": " formulated that cat ",
-    "createdAt": "2022-09-06T07:39:19.281Z",
-    "profilePhotoURL": "./assets/img/user-2.png"
+    'user': 'mracus',
+    'message': ' formulated that cat ',
+    'createdAt': '2022-09-06T07:39:19.281Z',
+    'profilePhotoURL': './assets/img/user-2.png'
   },
   {
-    "user": "douglascalhoun",
-    "message": "productively deployed my koolaid for real",
-    "createdAt": "2022-09-06T12:39:19.281Z",
-    "profilePhotoURL": "./assets/img/user-3.png"
+    'user': 'douglascalhoun',
+    'message': 'productively deployed my koolaid for real',
+    'createdAt': '2022-09-06T12:39:19.281Z',
+    'profilePhotoURL': './assets/img/user-3.png'
   },
   {
-    "user": "mracus",
-    "message": " delegated your belief system #burningman",
-    "createdAt": "2022-09-06T17:39:19.281Z",
-    "profilePhotoURL": "./assets/img/user-2.png"
+    'user': 'mracus',
+    'message': ' delegated your belief system #burningman',
+    'createdAt': '2022-09-06T17:39:19.281Z',
+    'profilePhotoURL': './assets/img/user-2.png'
   },
   {
-    "user": "shawndrost",
-    "message": "completely enjoyed the way of life ",
-    "createdAt": "2022-09-06T22:39:19.281Z",
-    "profilePhotoURL": "./assets/img/user-0.png"
+    'user': 'shawndrost',
+    'message': 'completely enjoyed the way of life ',
+    'createdAt': '2022-09-06T22:39:19.281Z',
+    'profilePhotoURL': './assets/img/user-0.png'
   },
   {
-    "user": "shawndrost",
-    "message": " aided my worm ",
-    "createdAt": "2022-09-07T03:39:19.281Z",
-    "profilePhotoURL": "./assets/img/user-0.png"
+    'user': 'shawndrost',
+    'message': ' aided my worm ',
+    'createdAt': '2022-09-07T03:39:19.281Z',
+    'profilePhotoURL': './assets/img/user-0.png'
   },
   {
-    "user": "sharksforcheap",
-    "message": " experienced the bad decision but only i know how",
-    "createdAt": "2022-09-07T08:39:19.281Z",
-    "profilePhotoURL": "./assets/img/user-1.png"
+    'user': 'sharksforcheap',
+    'message': ' experienced the bad decision but only i know how',
+    'createdAt': '2022-09-07T08:39:19.281Z',
+    'profilePhotoURL': './assets/img/user-1.png'
   },
   {
-    "user": "douglascalhoun",
-    "message": "efficiently installed an entire koolaid #sf",
-    "createdAt": "2022-09-07T13:39:19.281Z",
-    "profilePhotoURL": "./assets/img/user-3.png"
+    'user': 'douglascalhoun',
+    'message': 'efficiently installed an entire koolaid #sf',
+    'createdAt': '2022-09-07T13:39:19.281Z',
+    'profilePhotoURL': './assets/img/user-3.png'
   },
   {
-    "user": "shawndrost",
-    "message": "the president automated the big system but only i know how",
-    "createdAt": "2022-09-07T18:39:19.281Z",
-    "profilePhotoURL": "./assets/img/user-0.png"
+    'user': 'shawndrost',
+    'message': 'the president automated the big system but only i know how',
+    'createdAt': '2022-09-07T18:39:19.281Z',
+    'profilePhotoURL': './assets/img/user-0.png'
   },
   {
-    "user": "douglascalhoun",
-    "message": "a seedy old man invented my city #yolo",
-    "createdAt": "2022-09-07T23:39:19.281Z",
-    "profilePhotoURL": "./assets/img/user-3.png"
+    'user': 'douglascalhoun',
+    'message': 'a seedy old man invented my city #yolo',
+    'createdAt': '2022-09-07T23:39:19.281Z',
+    'profilePhotoURL': './assets/img/user-3.png'
   },
   {
-    "user": "sharksforcheap",
-    "message": " interfaced the big potato ",
-    "createdAt": "2022-09-07T23:39:20.431Z",
-    "profilePhotoURL": "./assets/img/user-1.png"
+    'user': 'sharksforcheap',
+    'message': ' interfaced the big potato ',
+    'createdAt': '2022-09-07T23:39:20.431Z',
+    'profilePhotoURL': './assets/img/user-1.png'
   },
   {
-    "user": "mracus",
-    "message": "ask me how i systematized the big mind #techlife",
-    "createdAt": "2022-09-07T23:39:20.977Z",
-    "profilePhotoURL": "./assets/img/user-2.png"
+    'user': 'mracus',
+    'message': 'ask me how i systematized the big mind #techlife',
+    'createdAt': '2022-09-07T23:39:20.977Z',
+    'profilePhotoURL': './assets/img/user-2.png'
   },
   {
-    "user": "sharksforcheap",
-    "message": " debugged the big life #sf",
-    "createdAt": "2022-09-07T23:39:21.416Z",
-    "profilePhotoURL": "./assets/img/user-1.png"
+    'user': 'sharksforcheap',
+    'message': ' debugged the big life #sf',
+    'createdAt': '2022-09-07T23:39:21.416Z',
+    'profilePhotoURL': './assets/img/user-1.png'
   },
   {
-    "user": "shawndrost",
-    "message": " downloaded the money #burningman",
-    "createdAt": "2022-09-07T23:39:22.259Z",
-    "profilePhotoURL": "./assets/img/user-0.png"
+    'user': 'shawndrost',
+    'message': ' downloaded the money #burningman',
+    'createdAt': '2022-09-07T23:39:22.259Z',
+    'profilePhotoURL': './assets/img/user-0.png'
   },
   {
-    "user": "mracus",
-    "message": "just navigated your koolaid ",
-    "createdAt": "2022-09-07T23:39:23.233Z",
-    "profilePhotoURL": "./assets/img/user-2.png"
+    'user': 'mracus',
+    'message': 'just navigated your koolaid ',
+    'createdAt': '2022-09-07T23:39:23.233Z',
+    'profilePhotoURL': './assets/img/user-2.png'
   },
   {
-    "user": "mracus",
-    "message": "just enjoyed the big cloud for real",
-    "createdAt": "2022-09-07T23:39:24.329Z",
-    "profilePhotoURL": "./assets/img/user-2.png"
+    'user': 'mracus',
+    'message': 'just enjoyed the big cloud for real',
+    'createdAt': '2022-09-07T23:39:24.329Z',
+    'profilePhotoURL': './assets/img/user-2.png'
   },
   {
-    "user": "mracus",
-    "message": "last night i delegated the worm ",
-    "createdAt": "2022-09-07T23:39:24.645Z",
-    "profilePhotoURL": "./assets/img/user-2.png"
+    'user': 'mracus',
+    'message': 'last night i delegated the worm ',
+    'createdAt': '2022-09-07T23:39:24.645Z',
+    'profilePhotoURL': './assets/img/user-2.png'
   },
   {
-    "user": "shawndrost",
-    "message": " developed the cloud ",
-    "createdAt": "2022-09-07T23:39:25.694Z",
-    "profilePhotoURL": "./assets/img/user-0.png"
+    'user': 'shawndrost',
+    'message': ' developed the cloud ',
+    'createdAt': '2022-09-07T23:39:25.694Z',
+    'profilePhotoURL': './assets/img/user-0.png'
   },
 ];

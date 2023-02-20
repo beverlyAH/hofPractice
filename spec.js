@@ -413,25 +413,25 @@
           });
           it('should return array of only user messages', function () {
             var onlyMessages = [
-              "that wizard overhauled this worm #techlife",
-              "completely overhauled this security system #sxsw",
-              " formulated that cat ",
-              "productively deployed my koolaid for real",
-              " delegated your belief system #burningman",
-              "completely enjoyed the way of life ",
-              " aided my worm ",
-              " experienced the bad decision but only i know how",
-              "efficiently installed an entire koolaid #sf",
-              "the president automated the big system but only i know how",
-              "a seedy old man invented my city #yolo",
-              " interfaced the big potato ",
-              "ask me how i systematized the big mind #techlife",
-              " debugged the big life #sf",
-              " downloaded the money #burningman",
-              "just navigated your koolaid ",
-              "just enjoyed the big cloud for real",
-              "last night i delegated the worm ",
-              " developed the cloud "
+              'that wizard overhauled this worm #techlife',
+              'completely overhauled this security system #sxsw',
+              ' formulated that cat ',
+              'productively deployed my koolaid for real',
+              ' delegated your belief system #burningman',
+              'completely enjoyed the way of life ',
+              ' aided my worm ',
+              ' experienced the bad decision but only i know how',
+              'efficiently installed an entire koolaid #sf',
+              'the president automated the big system but only i know how',
+              'a seedy old man invented my city #yolo',
+              ' interfaced the big potato ',
+              'ask me how i systematized the big mind #techlife',
+              ' debugged the big life #sf',
+              ' downloaded the money #burningman',
+              'just navigated your koolaid ',
+              'just enjoyed the big cloud for real',
+              'last night i delegated the worm ',
+              ' developed the cloud '
             ];
             expect(allUserMessages(testTweets)).to.eql(onlyMessages);
           });
@@ -489,7 +489,7 @@
           });
           it('should return total sum of all prices', function () {
             var total = sumTotal(testGrocery);
-            console.log(total);
+            // console.log(total);
             expect(total).to.equal(173.98);
           });
         });
@@ -536,16 +536,16 @@
           nativeMethods('reduce', false, function () {
             countMessagesPerUser(testTweets);
           });
-          noForLoops(countMessagesPerUser)
+          noForLoops(countMessagesPerUser);
           it('should return an object', function () {
             expect(countMessagesPerUser(testTweets)).to.be.an('object');
           });
           it('should return object with correct values', function () {
             var counts = {
-              "douglascalhoun": 5,
-              "mracus": 6,
-              "shawndrost": 5,
-              "sharksforcheap": 3
+              'douglascalhoun': 5,
+              'mracus': 6,
+              'shawndrost': 5,
+              'sharksforcheap': 3
             };
             expect(countMessagesPerUser(testTweets)).to.eql(counts);
           });
